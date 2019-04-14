@@ -3,6 +3,8 @@ Header only Go like channels for c++
 ___
 This is highly inspired from this [article](https://st.xorian.net/blog/2012/08/go-style-channel-in-c/)
 
+It is simply a thread-safe queue, that can be used for thread syncronization tasks.
+
 ### Available methods:
 - push()
 - get()
@@ -10,6 +12,7 @@ This is highly inspired from this [article](https://st.xorian.net/blog/2012/08/g
 - closed()
 ___
 ### Example:
+Workers listen for messages on the channel for tasks to preform until the channel is closed and drained.
 ```c++
 #include <iostream> 
 #include "chan.h"
